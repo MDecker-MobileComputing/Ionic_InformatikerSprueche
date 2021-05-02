@@ -11,7 +11,7 @@ These citations and the few other texts in the app are translated to German and 
 ## Implementation details ##
 
 The English texts can be found in file [src/assets/i18n/en.json](src/assets/i18n/en.json),
-the German texts can be found in file [src/assets/i18n/de.json](src/assets/i18n/de.json).
+the German  texts can be found in file [src/assets/i18n/de.json](src/assets/i18n/de.json).
 
 The translation was implemented according to the following article: https://phrase.com/blog/posts/localizing-ionic-applications-with-ngx-translate/
 
@@ -20,7 +20,7 @@ First the following NPM modules have to be added to the Ionic project:
 npm install @ngx-translate/core @ngx-translate/http-loader --save
 ```
 
-To enable translation in the Ionic app some changes are needed in files [src/app/app.component.ts ](src/app/app.component.ts) and [src/app/app.component.ts](src/app/app.component.ts) for setting the default lanuage.
+To enable translation in the Ionic app some changes are needed in files [src/app/app.component.ts ](src/app/app.component.ts) and [src/app/app.component.ts](src/app/app.component.ts) for setting the default lanuage (`ngx-translate` is for Angular, i.e. not Ionic-specific).
 
 In HTML files you can reference a translated text using the `translate` pipe:
 ```
