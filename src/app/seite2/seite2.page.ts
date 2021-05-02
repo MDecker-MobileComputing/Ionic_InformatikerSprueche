@@ -14,7 +14,7 @@ export class Seite2Page {
    * Array mit Zahlen von 1 bis ANZ_SPRUECHE füllen. 
    * Lösung nach https://basarat.gitbook.io/typescript/main-1/create-arrays
    */
-  private nummernArray = [...new Array(this.ANZ_SPRUECHE)].map((_,i) => i+1 );
+  private nummernArray = [...new Array(this.ANZ_SPRUECHE)].map( (_,i) => i+1 );
 
   constructor() { }  
 

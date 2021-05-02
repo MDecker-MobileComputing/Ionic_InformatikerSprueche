@@ -16,6 +16,21 @@
     <ion-slide *ngFor="let nummer of nummernArray">
       <div class="slide">
         <h1>{{ "spruch_" + nummer | translate }}</h1>
+
+        &nbsp;
+
+        <div *ngIf="nummer===1">
+          <p>{{ "wischen_links" | translate }}</p>
+        </div>
+
+        <div *ngIf="nummer===ANZ_SPRUECHE">
+          <p>{{ "wischen_rechts" | translate }}</p>
+        </div>
+
+        <div *ngIf="nummer > 1 && nummer < ANZ_SPRUECHE">
+          <p>{{ "wischen_links_rechts" | translate }}</p>
+        </div>
+
       </div>
     </ion-slide>
 
