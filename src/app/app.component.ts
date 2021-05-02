@@ -7,16 +7,10 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+
   constructor(private translate: TranslateService) {
 
-    this.initialisierung();
-  }
-
-  /**
-   * Default-Sprache für i18n setzen.
-   */
-  initialisierung() {
-
+    // Default-Sprache für i18n setzen
     this.translate.setDefaultLang("en");
   }
 
