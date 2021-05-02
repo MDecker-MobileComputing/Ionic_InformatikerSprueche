@@ -9,13 +9,19 @@ import { MenuController } from '@ionic/angular';
 })
 export class AppComponent {
 
+  /**
+   * Default-Sprache auf Englisch setzen.
+   */
   constructor(private translate: TranslateService, 
               private menuController: MenuController) {
 
-    // Default-Sprache für i18n setzen
     this.translate.setDefaultLang("en");
+    //this.translate.setDefaultLang("de");
   }
 
+  /**
+   * Event-Handler-Methode für das Schließen des Menüs.
+   */
   menuSchliessen() {
     
     this.menuController.close();
