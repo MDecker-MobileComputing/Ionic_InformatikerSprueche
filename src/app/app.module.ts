@@ -16,6 +16,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 /**
  * Factory-Funktion, um speziellen Ordner für i18n-Dateien zu definieren.
+ * Die i18n-Dateien für die verschiedenen Sprache müssen im JSON-Format vorliegen,
+ * also z.B. `de.json`, `en.json`, etc.
  *
  * Für die Verwendung von ngx-translate mit Ionic müssen wir einen andere Ordner
  * für die i18n-Dateien definieren, nämlich `./assets/i18n/`.
