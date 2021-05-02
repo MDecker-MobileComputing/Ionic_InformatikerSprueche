@@ -1,0 +1,7 @@
+{
+  "name": "informatikersprueche",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
