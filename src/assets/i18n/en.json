@@ -1,3 +1,11 @@
 {
-  "name_der_app": "Computer Science Citations"
+  "name_der_app": "Computer Science Citations",
+  "wischen_links": "Swipe left for next citation",
+  "wischen_links_rechts": "Swipe left or right",
+  "wischen_rechts": "Last citation – Swipe right for previous citation",
+
+  "spruch_1": "Mosher’s Law of Software Engineering: Don’t worry if it doesn’t work right. If everything did, you’d be out of a job.",
+  "spruch_2": "Science is what we understand well enough to explain to a computer. Art is everything else we do.",
+  "spruch_3": "The three golden rules to ensure computer security are: do not own a computer; do not power it on; and do not use it.",
+  "spruch_4": "Andy Grove giveth and Bill Gates taketh away."
 }

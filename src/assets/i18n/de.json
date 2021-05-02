@@ -1,3 +1,11 @@
 {
-  "name_der_app": "Informatiker-Sprüche"
+  "name_der_app": "Informatiker-Sprüche",
+  "wischen_links": "Nach links wischen für nächsten Spruch",
+  "wischen_links_rechts": "Links oder rechts wischen",
+  "wischen_rechts": "Letzter Spruch – nach rechts wischen für vorherigen Spruch.",
+
+  "spruch_1": "Moshers Gesetz des Software Engineering: Mache Dir keine sorgen wenn es nicht richtig funktioniert; wenn alles funktioneren würde, dann wärst Du arbeitslos.",
+  "spruch_2": "Wissenschaft ist was wir genau genug verstehen um es einem Computer zu erklären; alles andere ist Kunst.",
+  "spruch_3": "Die drei goldenen Regeln der Computersicherheit: Hole Dir keinen Computer, schalte keinen Computer ein, verwende keinen Computer.",
+  "spruch_4": "Andy Grove hat's gegeben und Bill Gates hat's genommen."
 }
