@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>{{ "name_der_app" | translate }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ "seitentitel_variante" | translate: {variant_number: 1} }}</ion-title>
   </ion-toolbar>
 </ion-header>
 

@@ -26,7 +26,10 @@ In HTML files you can reference a translated text using the `translate` pipe:
 ```
 {{ "key_for_text" | translate }}
 ```
+
 To enable the `translate` pipeline in a HTML file class `TranslateModule` must be exported in the corresponding `.module.ts` file for each page in which this pipe is to be used, for example file [src/app/home/home.module.ts](src/app/home/home.module.ts).
+
+Here is another article describing how to have translatable texts with parameters: https://vitamindev.com/angular/how-to-use-parameters-in-ngx-translate/
 
 <br>
 

@@ -13,6 +13,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
+
 /**
  * Factory-Funktion, um speziellen Ordner für i18n-Dateien zu definieren.
  *
@@ -36,6 +37,7 @@ export function erzeugeTranslateLoader(http: HttpClient) {
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
+    TranslateModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
