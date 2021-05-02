@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "informatikersprueche",
+  "appId": "de.mide.ionic.informatikersprueche",
+  "appName": "Info-Sprüche",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
