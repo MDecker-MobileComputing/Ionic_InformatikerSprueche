@@ -10,7 +10,7 @@ import { Platform } from '@ionic/angular';
 })
 export class AppComponent {
 
-  constructor(private translate: TranslateService, 
+  constructor(private translate: TranslateService,
               private menuController: MenuController,
               private platform: Platform) {
 
@@ -20,7 +20,7 @@ export class AppComponent {
   /**
    * Übersetzung initialisieren, d.h. u.a. die aktuelle Browsersprache auswerten.
    * Lösung nach https://masteringionic.com/blog/2018-07-14-creating-a-multi-language-ionic-translation-app-with-ngx-translate/
-   * 
+   *
    * Diese Methode darf erst dann aufgerufen werden, wenn der von der Methode Platform::read() zurückgegebene Intent
    * aufgelöst wurde.
    */
@@ -30,24 +30,24 @@ export class AppComponent {
         this.translate.setDefaultLang("en");
 
         if (this.translate.getBrowserLang() !== undefined) {
-        
+
             let browserSprache = this.translate.getBrowserLang();
             console.log(`browsersprache=${browserSprache}`);
             this.translate.use(browserSprache);
-    
+
         } else  {
-    
+
             this.translate.use("en"); // Fallback-Sprache
             console.log("Fallback-Sprache wird gesetzt!");
-        }    
+        }
   }
 
   /**
    * Event-Handler-Methode für das Schließen des Menüs.
    */
   menuSchliessen() {
-    
+
     this.menuController.close();
-  }  
+  }
 
 }
