@@ -8,5 +8,12 @@
   "spruch_1": "Moshers Gesetz des Software Engineering: Mache Dir keine Sorgen wenn es nicht richtig funktioniert; wenn alles funktioneren würde, dann wärst Du arbeitslos.",
   "spruch_2": "Wissenschaft ist was wir genau genug verstehen um es einem Computer zu erklären; alles andere ist Kunst.",
   "spruch_3": "Die drei goldenen Regeln der Computersicherheit: Hole Dir keinen Computer, schalte keinen Computer ein, verwende keinen Computer.",
-  "spruch_4": "Andy Grove hat's gegeben und Bill Gates hat's genommen."
+  "spruch_4": "Andy Grove hat's gegeben und Bill Gates hat's genommen.",
+
+  "sprueche": {
+    "no1": "Moshers Gesetz des Software Engineering: Mache Dir keine Sorgen wenn es nicht richtig funktioniert; wenn alles funktioneren würde, dann wärst Du arbeitslos.",
+    "no2": "Wissenschaft ist was wir genau genug verstehen um es einem Computer zu erklären; alles andere ist Kunst.",
+    "no3": "Die drei goldenen Regeln der Computersicherheit: Hole Dir keinen Computer, schalte keinen Computer ein, verwende keinen Computer.",
+    "no4": "Andy Grove hat's gegeben und Bill Gates hat's genommen."
+  }
 }
