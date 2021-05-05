@@ -13,11 +13,20 @@ import { AlertController } from '@ionic/angular';
 })
 export class Seite4Page  {
 
+  /** Übersetzung für Wort "Spruch", das als Dialogtitel verwendet wird; wird im Konstruktor gefüllt. */
+  private spruchTitle = "";
+
   /**
    * Konstruktor für Dependency Injection.
    */
   constructor(private translate: TranslateService,
-              private alertCtrl: AlertController) { }
+              private alertCtrl: AlertController) {
+
+    this.translate.get("spruch").subscribe( (uebersetzung: string) => {
+
+        this.spruchTitle = uebersetzung;
+    });
+  }
 
   /**
    * Button-Event-Händler für Anzeige zufällig ausgewählter Spruch.
@@ -28,9 +37,9 @@ export class Seite4Page  {
 
     const spruchKey = `spruch_${spruchNummer}`;
 
-    this.translate.get(spruchKey).subscribe( (text: string) => {
+    this.translate.get(spruchKey).subscribe( (uebersetzung: string) => {
 
-      this.zeigeDialog("Spruch", text);
+      this.zeigeDialog(this.spruchTitle, uebersetzung);
     });
   }
 
