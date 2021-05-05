@@ -44,7 +44,10 @@ export class Seite4Page  {
   }
 
   /**
-   * Erzeugt Zufallszahl im vorgegebenen Bereich.
+   * Hilfsmethode: Erzeugt Zufallszahl im vorgegebenen Bereich.
+   *
+   * Beispiel: `erzeugeZufallszahl(2,5)` kann die folgenden Zahlen zurückliefern: 2, 3, 4, 5.
+   *
    * @param min Untergrenze (inkl.)
    * @param max Obergrenze (inkl.)
    */
