@@ -3,6 +3,7 @@
 This repository contains an Angular-based Ionic app that shows some citations from the area of computer since in
 [ion-slides](https://ionicframework.com/docs/api/slides) elements.
 These citations and the few other texts in the app are translated to German and Englisch, whereas the latter is the default language.
+For the translatable texts Angular's translation library [ngx-translate](https://www.npmjs.com/package/@ngx-translate/core) is used.
 
 <br>
 
