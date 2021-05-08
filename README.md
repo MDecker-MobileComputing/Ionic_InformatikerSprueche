@@ -9,7 +9,19 @@ For the translatable texts Angular's translation library [ngx-translate](https:/
 
 ----
 
-## Implementation details ##
+## Screenshots ##
+
+![Screenshot 1](screenshot_1.png)  ![Screenshot 2](screenshot_2.png)
+
+![Screenshot 3](screenshot_3.png)  ![Screenshot 4](screenshot_4.png)
+
+![Screenshot 5](screenshot_5.png)
+
+<br>
+
+----
+
+## Implementation Details ##
 
 The English texts can be found in file [src/assets/i18n/en.json](src/assets/i18n/en.json),
 the German  texts can be found in file [src/assets/i18n/de.json](src/assets/i18n/de.json).
