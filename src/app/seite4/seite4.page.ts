@@ -31,16 +31,23 @@ export class Seite4Page  {
   /**
    * Button-Event-Händler für Anzeige zufällig ausgewählter Spruch.
    */
+
   private onZufallsSpruchButton() {
 
     const spruchNummer = this.erzeugeZufallszahl( 1, 4 );
-
     const spruchKey = `spruch_${spruchNummer}`;
 
     this.translate.get(spruchKey).subscribe( (uebersetzung: string) => {
 
       this.zeigeDialog(this.spruchTitle, uebersetzung);
     });
+
+
+    /*
+    // Alternative: synchrone Abfrage übersetzter Text => wenn Texte noch nicht geladen, dann wird nichts zurückgegeben
+    const uebersetzung = this.translate.instant(spruchKey);
+    this.zeigeDialog(this.spruchTitle, uebersetzung);
+    */
   }
 
   /**
