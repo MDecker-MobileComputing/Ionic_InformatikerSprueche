@@ -16,6 +16,7 @@ export class Seite4Page  {
   /** Übersetzung für Wort "Spruch", das als Dialogtitel verwendet wird; wird im Konstruktor gefüllt. */
   private spruchTitle = "";
 
+  
   /**
    * Konstruktor für Dependency Injection.
    */

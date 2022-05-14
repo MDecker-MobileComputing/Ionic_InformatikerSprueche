@@ -16,6 +16,4 @@ export class Seite2Page {
    */
   private nummernArray = [...new Array(this.ANZ_SPRUECHE)].map( (_,i) => i+1 );
 
-  constructor() { }
-
 }
