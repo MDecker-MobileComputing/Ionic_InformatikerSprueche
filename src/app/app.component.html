@@ -1,6 +1,6 @@
 
 <ion-app>
-  <ion-menu side="start" menuId="first">
+  <ion-menu side="start" contentId="main-content">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-title>{{ "name_der_app" | translate }}</ion-title>
@@ -15,5 +15,7 @@
       </ion-list>
     </ion-content>
   </ion-menu>
-  <ion-router-outlet main></ion-router-outlet>
+
+  <ion-router-outlet id="main-content"><!-- Wert von Attribut "id" muss wie von "contentID" von ion-menu sein -->
+  </ion-router-outlet>
 </ion-app>
