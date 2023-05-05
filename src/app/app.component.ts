@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { MenuController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 import { Platform } from '@ionic/angular';
+
+import { register } from 'swiper/element/bundle';
+
+// für <swiper-slide>: https://ionicframework.com/docs/angular/slides
+register();
 
 @Component({
   selector: 'app-root',
@@ -10,11 +15,11 @@ import { Platform } from '@ionic/angular';
 })
 export class AppComponent {
 
-  constructor(private translate: TranslateService,
-              private menuController: MenuController,
+  constructor(private menuController: MenuController,
+              private translate: TranslateService, 
               private platform: Platform) {
 
-      this.platform.ready().then( () => { this.uebersetzungInitialisieren(); } );
+        this.platform.ready().then( () => { this.uebersetzungInitialisieren(); } );
   }
 
   /**
@@ -26,28 +31,29 @@ export class AppComponent {
    */
   uebersetzungInitialisieren() {
 
-        // Wenn ein Text in aktueller Sprache nicht vorhanden ist, dann englischen Text anzeigen
-        this.translate.setDefaultLang("en");
+    // Wenn ein Text in aktueller Sprache nicht vorhanden ist, dann englischen Text anzeigen
+    this.translate.setDefaultLang("en");
 
-        if (this.translate.getBrowserLang() !== undefined) {
+    if (this.translate.getBrowserLang() !== undefined) {
 
-            let browserSprache = this.translate.getBrowserLang();
-            console.log(`browsersprache=${browserSprache}`);
-            this.translate.use(browserSprache);
+        let browserSprache = this.translate.getBrowserLang();
+        if (!browserSprache) { browserSprache = "en"; }
 
-        } else  {
+        console.log(`browsersprache=${browserSprache}`);
+        this.translate.use(browserSprache);
 
-            this.translate.use("en"); // Fallback-Sprache
-            console.log("Fallback-Sprache wird gesetzt!");
-        }
-  }
+    } else  {
 
-  /**
+        this.translate.use("en"); // Fallback-Sprache
+        console.log("Fallback-Sprache wird gesetzt!");
+    }
+}  
+
+    /**
    * Event-Handler-Methode für das Schließen des Menüs.
    */
-  menuSchliessen() {
+    menuSchliessen() {
 
-    this.menuController.close();
-  }
-
+      this.menuController.close();
+    }
 }

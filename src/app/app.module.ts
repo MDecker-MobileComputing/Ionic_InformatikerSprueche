@@ -12,7 +12,8 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
-
+// Benötigt für <swiper-slide>, siehe auch https://ionicframework.com/docs/angular/slides
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 /**
  * Factory-Funktion, um speziellen Ordner für i18n-Dateien zu definieren.
@@ -27,27 +28,24 @@ export function erzeugeTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
 }
 
-/**
- * Anpassungen für i18n nach
- * https://phrase.com/blog/posts/localizing-ionic-applications-with-ngx-translate/
- */
+
 @NgModule({
-    declarations: [AppComponent],
-    imports: [
-        BrowserModule,
-        IonicModule.forRoot(),
-        AppRoutingModule,
-        HttpClientModule,
-        TranslateModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: (erzeugeTranslateLoader),
-                deps: [HttpClient]
-            }
-        })
-    ],
-    providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-    bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  imports: [BrowserModule, 
+            IonicModule.forRoot(), 
+            AppRoutingModule,
+            HttpClientModule,
+            TranslateModule,
+            TranslateModule.forRoot({
+              loader: {
+                  provide: TranslateLoader,
+                  useFactory: (erzeugeTranslateLoader),
+                  deps: [HttpClient]
+              }
+          })            
+  ],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA] // doesn't work? https://forum.ionicframework.com/t/swiper-container-is-not-know-element/233240/
 })
 export class AppModule {}

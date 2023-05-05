@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
@@ -17,6 +17,7 @@ import { Seite3Page } from './seite3.page';
     Seite3PageRoutingModule,
     TranslateModule
   ],
-  declarations: [Seite3Page]
+  declarations: [Seite3Page],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA] // https://ionicframework.com/docs/angular/slides
 })
 export class Seite3PageModule {}

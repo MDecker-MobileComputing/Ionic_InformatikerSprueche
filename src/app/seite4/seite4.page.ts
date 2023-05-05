@@ -2,16 +2,12 @@ import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { AlertController } from '@ionic/angular';
 
-/**
- * Seite zur Demonstration, wie programmatisch auf einen übersetzen Text
- * zugegriffen wird.
- */
 @Component({
   selector: 'app-seite4',
   templateUrl: './seite4.page.html',
   styleUrls: ['./seite4.page.scss'],
 })
-export class Seite4Page  {
+export class Seite4Page {
 
   /** Übersetzung für Wort "Spruch", das als Dialogtitel verwendet wird; wird im Konstruktor gefüllt. */
   private spruchTitle = "";
@@ -33,7 +29,7 @@ export class Seite4Page  {
    * Button-Event-Händler für Anzeige zufällig ausgewählter Spruch.
    */
 
-  private onZufallsSpruchButton() {
+  public onZufallsSpruchButton() {
 
     const spruchNummer = this.erzeugeZufallszahl( 1, 4 );
     const spruchKey = `spruch_${spruchNummer}`;
@@ -83,5 +79,6 @@ export class Seite4Page  {
 
     await meinAlert.present();
   }
+
 
 }

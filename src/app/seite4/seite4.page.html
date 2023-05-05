@@ -1,3 +1,4 @@
+
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -7,12 +8,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
 
   &nbsp;
 
   <ion-button expand="block"
-              (click)="onZufallsSpruchButton()">Zufälligen Spruch anzeigen</ion-button>
+              (click)="onZufallsSpruchButton()">{{ "button_text" | translate }}</ion-button>
   &nbsp;
 
 </ion-content>
+
