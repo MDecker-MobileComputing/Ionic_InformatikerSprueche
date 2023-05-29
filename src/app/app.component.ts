@@ -29,7 +29,7 @@ export class AppComponent {
    * Diese Methode darf erst dann aufgerufen werden, wenn der von der Methode Platform::read() zurückgegebene Intent
    * aufgelöst wurde.
    */
-  uebersetzungInitialisieren() {
+  private uebersetzungInitialisieren() {
 
     // Wenn ein Text in aktueller Sprache nicht vorhanden ist, dann englischen Text anzeigen
     this.translate.setDefaultLang("en");
