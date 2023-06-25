@@ -22,6 +22,7 @@ export class AppComponent {
         this.platform.ready().then( () => { this.uebersetzungInitialisieren(); } );
   }
 
+  
   /**
    * Übersetzung initialisieren, d.h. u.a. die aktuelle Browsersprache auswerten.
    * Lösung nach https://masteringionic.com/blog/2018-07-14-creating-a-multi-language-ionic-translation-app-with-ngx-translate/
@@ -47,13 +48,14 @@ export class AppComponent {
         this.translate.use("en"); // Fallback-Sprache
         console.log("Fallback-Sprache wird gesetzt!");
     }
-}  
+  }  
 
-    /**
+
+  /**
    * Event-Handler-Methode für das Schließen des Menüs.
    */
-    menuSchliessen() {
+  menuSchliessen() {
 
       this.menuController.close();
-    }
+  }
 }
