@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { AlertController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-seite4',
   templateUrl: './seite4.page.html',
@@ -12,7 +13,7 @@ export class Seite4Page {
   /** Übersetzung für Wort "Spruch", das als Dialogtitel verwendet wird; wird im Konstruktor gefüllt. */
   private spruchTitle = "";
 
-  
+
   /**
    * Konstruktor für Dependency Injection.
    */
@@ -25,10 +26,10 @@ export class Seite4Page {
     });
   }
 
+
   /**
    * Button-Event-Händler für Anzeige zufällig ausgewählter Spruch.
    */
-
   public onZufallsSpruchButton() {
 
     const spruchNummer = this.erzeugeZufallszahl( 1, 4 );
@@ -41,7 +42,8 @@ export class Seite4Page {
 
 
     /*
-    // Alternative: synchrone Abfrage übersetzter Text => wenn Texte noch nicht geladen, dann wird nichts zurückgegeben
+    // Alternative: synchrone Abfrage übersetzter Text =>
+                    wenn Texte noch nicht geladen, dann wird aber nichts zurückgegeben
     const uebersetzung = this.translate.instant(spruchKey);
     this.zeigeDialog(this.spruchTitle, uebersetzung);
     */
@@ -62,6 +64,7 @@ export class Seite4Page {
     return Math.round(num);
   }
 
+
   /**
    * Hilfsmethode: Alert anzeigen, siehe auch https://ionicframework.com/docs/api/alert
    *
@@ -79,6 +82,5 @@ export class Seite4Page {
 
     await meinAlert.present();
   }
-
 
 }

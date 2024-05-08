@@ -1,0 +1,34 @@
+name: Ionic Angular CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4 # neueste Version siehe https://github.com/actions/checkout/releases
+
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4 # neueste Version siehe https://github.com/actions/setup-node/releases
+      with:
+        node-version: 20.x
+
+    - name: Cache Node.js modules
+      uses: actions/cache@v4 # neueste Version siehe https://github.com/actions/cache/releases
+      with:
+        path: ~/.npm
+        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-node-
+          ${{ runner.OS }}-
+
+    - name: Install Dependencies
+      run: npm ci # besonders "sauberer Build", z.B. node_modules ggf. löschen
+
+    - name: Build Ionic App
+      run: |
+        npm install -g @ionic/cli
+        ionic build

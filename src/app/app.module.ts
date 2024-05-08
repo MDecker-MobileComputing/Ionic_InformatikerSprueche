@@ -31,8 +31,8 @@ export function erzeugeTranslateLoader(http: HttpClient) {
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, 
-            IonicModule.forRoot(), 
+  imports: [BrowserModule,
+            IonicModule.forRoot(),
             AppRoutingModule,
             HttpClientModule,
             TranslateModule,
@@ -42,10 +42,10 @@ export function erzeugeTranslateLoader(http: HttpClient) {
                   useFactory: (erzeugeTranslateLoader),
                   deps: [HttpClient]
               }
-          })            
-  ],
+          })
+           ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA] // doesn't work? https://forum.ionicframework.com/t/swiper-container-is-not-know-element/233240/
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}

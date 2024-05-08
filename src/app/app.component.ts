@@ -8,6 +8,7 @@ import { register } from 'swiper/element/bundle';
 // für <swiper-slide>: https://ionicframework.com/docs/angular/slides
 register();
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -16,13 +17,13 @@ register();
 export class AppComponent {
 
   constructor(private menuController: MenuController,
-              private translate: TranslateService, 
+              private translate: TranslateService,
               private platform: Platform) {
 
-        this.platform.ready().then( () => { this.uebersetzungInitialisieren(); } );
+      this.platform.ready().then( () => { this.uebersetzungInitialisieren(); } );
   }
 
-  
+
   /**
    * Übersetzung initialisieren, d.h. u.a. die aktuelle Browsersprache auswerten.
    * Lösung nach https://masteringionic.com/blog/2018-07-14-creating-a-multi-language-ionic-translation-app-with-ngx-translate/
@@ -48,7 +49,7 @@ export class AppComponent {
         this.translate.use("en"); // Fallback-Sprache
         console.log("Fallback-Sprache wird gesetzt!");
     }
-  }  
+  }
 
 
   /**
@@ -58,4 +59,5 @@ export class AppComponent {
 
       this.menuController.close();
   }
+
 }
