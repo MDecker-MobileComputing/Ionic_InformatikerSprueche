@@ -10,7 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 // Importe für i18n
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+
+import { provideHttpClient } from '@angular/common/http';
 
 // Benötigt für <swiper-slide>, siehe auch https://ionicframework.com/docs/angular/slides
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -29,12 +31,12 @@ export function erzeugeTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
 }
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [  BrowserModule ,
               IonicModule.forRoot(),
               AppRoutingModule,
-              HttpClientModule,
               TranslateModule,
               TranslateModule.forRoot({
                 loader: {
@@ -44,7 +46,10 @@ export function erzeugeTranslateLoader(http: HttpClient) {
               }
             })
       ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [ { provide: RouteReuseStrategy,
+               useClass: IonicRouteStrategy },
+               provideHttpClient()
+             ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
