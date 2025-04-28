@@ -5,22 +5,23 @@ import { Platform } from '@ionic/angular';
 
 import { register } from 'swiper/element/bundle';
 
+
 // für <swiper-slide>: https://ionicframework.com/docs/angular/slides
 register();
-
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
+  standalone: false,
 })
 export class AppComponent {
 
-  constructor(private menuController: MenuController,
-              private translate: TranslateService,
-              private platform: Platform) {
+  constructor( private menuController: MenuController,
+               private translate: TranslateService,
+               private platform: Platform ) {
 
-      this.platform.ready().then( () => { this.uebersetzungInitialisieren(); } );
+    this.platform.ready().then( () => { this.uebersetzungInitialisieren(); } );
   }
 
 
@@ -33,22 +34,22 @@ export class AppComponent {
    */
   private uebersetzungInitialisieren() {
 
-    // Wenn ein Text in aktueller Sprache nicht vorhanden ist, dann englischen Text anzeigen
-    this.translate.setDefaultLang("en");
+      // Wenn ein Text in aktueller Sprache nicht vorhanden ist, dann englischen Text anzeigen
+      this.translate.setDefaultLang("en");
 
-    if (this.translate.getBrowserLang() !== undefined) {
+      if (this.translate.getBrowserLang() !== undefined) {
 
-        let browserSprache = this.translate.getBrowserLang();
-        if (!browserSprache) { browserSprache = "en"; }
+          let browserSprache = this.translate.getBrowserLang();
+          if (!browserSprache) { browserSprache = "en"; }
 
-        console.log(`browsersprache=${browserSprache}`);
-        this.translate.use(browserSprache);
+          console.log(`browsersprache=${browserSprache}`);
+          this.translate.use(browserSprache);
 
-    } else  {
+      } else  {
 
-        this.translate.use("en"); // Fallback-Sprache
-        console.log("Fallback-Sprache wird gesetzt!");
-    }
+          this.translate.use("en"); // Fallback-Sprache
+          console.log("Fallback-Sprache wird gesetzt!");
+      }
   }
 
 

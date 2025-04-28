@@ -15,6 +15,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 // Benötigt für <swiper-slide>, siehe auch https://ionicframework.com/docs/angular/slides
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+
 /**
  * Factory-Funktion, um speziellen Ordner für i18n-Dateien zu definieren.
  * Die i18n-Dateien für die verschiedenen Sprache müssen im JSON-Format vorliegen,
@@ -28,22 +29,21 @@ export function erzeugeTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
 }
 
-
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule,
-            IonicModule.forRoot(),
-            AppRoutingModule,
-            HttpClientModule,
-            TranslateModule,
-            TranslateModule.forRoot({
-              loader: {
+  imports: [  BrowserModule ,
+              IonicModule.forRoot(),
+              AppRoutingModule,
+              HttpClientModule,
+              TranslateModule,
+              TranslateModule.forRoot({
+                loader: {
                   provide: TranslateLoader,
                   useFactory: (erzeugeTranslateLoader),
                   deps: [HttpClient]
               }
-          })
-           ],
+            })
+      ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

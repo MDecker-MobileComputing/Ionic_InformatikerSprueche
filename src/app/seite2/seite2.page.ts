@@ -4,8 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-seite2',
   templateUrl: './seite2.page.html',
   styleUrls: ['./seite2.page.scss'],
+  standalone: false
 })
-export class Seite2Page  {
+export class Seite2Page {
 
   /** Anzahl der Sprüche, die in den i18n-Dateien definiert ist. */
   public readonly ANZ_SPRUECHE = 4;
