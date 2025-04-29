@@ -1,20 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
-// Importe für i18n
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
-
 import { provideHttpClient } from '@angular/common/http';
-
-// Benötigt für <swiper-slide>, siehe auch https://ionicframework.com/docs/angular/slides
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
