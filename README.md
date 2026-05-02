@@ -1,11 +1,11 @@
-# Ionic app to demonstrate translation of UI texts #
+# Ionic/Angular: Demo-App "Informatiker-Zitate" für i18n #
 
 <br>
 
-This repository contains an Angular-based Ionic app that shows some citations from the area of computer since in
-[ion-slides](https://ionicframework.com/docs/api/slides) elements.
-These citations and the few other texts in the app are translated to German and Englisch, whereas the latter is the default language.
-For the translatable texts Angular's translation library [ngx-translate](https://www.npmjs.com/package/@ngx-translate/core) is used.
+Dieses Repository enthält eine Angular-basierte Ionic-App, die einige Zitate aus dem Bereich der Informatik in
+[ion-slides](https://ionicframework.com/docs/api/slides)-Elementen anzeigt.
+Diese Zitate sowie die wenigen anderen Texte in der App sind ins Deutsche und Englische übersetzt, wobei Letzteres die Standardsprache ist.
+Für die übersetzbaren Texte wird Angulars Übersetzungsbibliothek [ngx-translate](https://www.npmjs.com/package/@ngx-translate/core) verwendet.
 
 <br>
 
@@ -15,26 +15,30 @@ For the translatable texts Angular's translation library [ngx-translate](https:/
 
 <br>
 
-The English texts can be found in file [src/assets/i18n/en.json](src/assets/i18n/en.json),
-the German  texts can be found in file [src/assets/i18n/de.json](src/assets/i18n/de.json).
+Die englischen Texte befinden sich in der Datei [src/assets/i18n/en.json](src/assets/i18n/en.json),
+die deutschen Texte befinden sich in der Datei [src/assets/i18n/de.json](src/assets/i18n/de.json).
 
-The translation was implemented according to the following article: https://phrase.com/blog/posts/localizing-ionic-applications-with-ngx-translate/
+Die Übersetzung wurde gemäß folgendem Artikel implementiert:
+https://phrase.com/blog/posts/localizing-ionic-applications-with-ngx-translate/
 
-First the following NPM modules have to be added to the Ionic project:
+Zunächst müssen die folgenden NPM-Module zum Ionic-Projekt hinzugefügt werden:
 ```
 npm install @ngx-translate/core @ngx-translate/http-loader --save
 ```
 
-To enable translation in the Ionic app some changes are needed in files [src/app/app.component.ts ](src/app/app.component.ts) and [src/app/app.component.ts](src/app/app.component.ts) for setting the default lanuage (`ngx-translate` is for Angular, i.e. not Ionic-specific).
+Um die Übersetzung in der Ionic-App zu aktivieren, sind einige Änderungen in den Dateien
+[src/app/app.component.ts](src/app/app.component.ts) erforderlich, um die Standardsprache festzulegen
+(`ngx-translate` ist für Angular gedacht, also nicht Ionic-spezifisch).
 
-In HTML files you can reference a translated text using the `translate` pipe:
+In HTML-Dateien kann ein übersetzter Text über die `translate`-Pipe referenziert werden:
 ```
 {{ "key_for_text" | translate }}
 ```
 
-To enable the `translate` pipeline in a HTML file class `TranslateModule` must be exported in the corresponding `.module.ts` file for each page in which this pipe is to be used, for example file [src/app/home/home.module.ts](src/app/home/home.module.ts).
 
-Here is another article describing how to have translatable texts with parameters: https://vitamindev.com/angular/how-to-use-parameters-in-ngx-translate/
+Damit die `translate`-Pipe in einer HTML-Datei verwendet werden kann, muss die Klasse `TranslateModule`
+in der entsprechenden `.module.ts`-Datei für jede Seite exportiert werden, auf der diese Pipe genutzt wird,
+zum Beispiel in der Datei [src/app/home/home.module.ts](src/app/home/home.module.ts).
 
 <br>
 
