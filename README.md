@@ -2,8 +2,7 @@
 
 <br>
 
-Dieses Repository enthält eine Angular-basierte Ionic-App, die einige Zitate aus dem Bereich der Informatik in
-[ion-slides](https://ionicframework.com/docs/api/slides)-Elementen anzeigt.
+Dieses Repository enthält eine Angular-basierte Ionic-App, die einige Zitate aus dem Bereich der Informatik anzeigt.
 Diese Zitate sowie die wenigen anderen Texte in der App sind ins Deutsche und Englische übersetzt, wobei Letzteres die Standardsprache ist.
 Für die übersetzbaren Texte wird Angulars Übersetzungsbibliothek [ngx-translate](https://www.npmjs.com/package/@ngx-translate/core) verwendet.
 
